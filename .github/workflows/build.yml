@@ -23,7 +23,7 @@ jobs:
 
       - name: Build contract
         run: |
-          cd contract
+          cd Contract
           cargo build --target wasm32-unknown-unknown --release
 
       - name: Upload WASM artifact
