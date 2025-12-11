@@ -22,12 +22,12 @@ jobs:
           targets: wasm32-unknown-unknown
 
       - name: Build contract
-        run: |
-          cd Contract
-          cargo build --target wasm32-unknown-unknown --release
+  run: |
+    cd Contract
+    cargo build --target wasm32-unknown-unknown --release
 
-      - name: Upload WASM artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: eternity-testnet
-          path: contract/target/wasm32-unknown-unknown/release/*.wasm
+- name: Upload WASM artifact
+  uses: actions/upload-artifact@v4
+  with:
+    name: eternity-testnet
+    path: Contract/target/wasm32-unknown-unknown/release/*.wasm
